@@ -5,14 +5,16 @@ Our chrome extension monitors user activity to offer personalised material in th
 
 
 ### Example:
-  input:
-  sentence = "Today, I called Klara to let her know that I will be joining her party.",
-  replacement names per category = {"person": "David H. Petraeus", "Hamid Karzai", "Donald Trump", "Marie Curie", "organization": "the London School of Economics", "Apple", "location": "Berlin", "Germany"}
+  inputs:
+  *sentence = "Today, I called Klara to let her know that I will be joining her party.",
+  *replacement names per category = {"person": "David H. Petraeus", "Hamid Karzai", "Donald Trump", "Marie Curie", "organization": "the London School of Economics", "Apple", "location": "Berlin", "Germany"}
   
   output:
   "Today, I called Marie Curie to let her know that I will be joining her party."
  
  
-### Deployment
-
-The function will be deployed as a lambda function.  
+### Subtasks
+* Decide on a named entity recognizer (NER): Spacy is one of the candidates for it, since it is heavily used in Elia. 
+* Revision of replacement names per category: since the categories can vary between the named entity recognizers, after selecting the NER, the categories and replacement name for each category should be revised.
+* Testing function with various type of named entities.
+* Deployment of the function as a AWS lambda. 
