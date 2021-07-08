@@ -6,8 +6,8 @@ Our chrome extension monitors user activity to offer personalised material in th
 
 #### Example:
   inputs:
-  *sentence = "Today, I called Klara to let her know that I will be joining her party.",
-  *replacement names per category = {"person": "David H. Petraeus", "Hamid Karzai", "Donald Trump", "Marie Curie", "organization": "the London School of Economics", "Apple", "location": "Berlin", "Germany"}
+  * sentence = "Today, I called Klara to let her know that I will be joining her party.",
+  * replacement names per category = {"person": "David H. Petraeus", "Hamid Karzai", "Donald Trump", "Marie Curie", "organization": "the London School of Economics", "Apple", "location": "Berlin", "Germany"}
   
   output:
   "Today, I called Marie Curie to let her know that I will be joining her party."
