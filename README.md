@@ -14,14 +14,14 @@ input:
   * user_id: string = "newcomer"
   
  outcome:
-
+ 
   * result of senEx function = ('join', 'VERB', 'VBG', 0.71, (1.43, (('party', 'NOUN'), 'VERB+NOUN')))
       "explanation of result of senEx function: 
       0.71 -> informativeness score, 
       1.43 -> typicality score,
       party_NOUN -> found collocation of the word in the sentence", 'VERB+NOUN' -> type of collocation
   * update on the tables
-      
+    <pre>
     Sentence (Table)                                            - New Entry
     id = Column(VARCHAR(36), primary_key=True)                  : "a random string" (unique ID generated to be a primary key)
     corpus_id = Column(VARCHAR(50), ForeignKey('corpora.id'))   : "WEB" (web is for each sentence parsed from extenstion so in this task it is constant)
@@ -37,7 +37,7 @@ input:
     informativeness = Column(INTEGER)                                                   : 0.71
     lempos_ind = Column(INTEGER)                                                        : 13 (index of the lempos in the sentence)
     collocate_ind = Column(INTEGER)                                                     : 15 (index of collocate in the sentence)
-   
+    </pre>
 ### Additional task:
 In order to protect users' privacy, the named entities such as person, city or country names in the sentences that the user clicks on a word should be replaced before further processing. 
 
