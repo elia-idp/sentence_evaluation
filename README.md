@@ -4,7 +4,7 @@ Create a AWS lambda function that evaluates and stores the sentences that users 
 
 # Sentence Evaluation
 
-Our chrome extension monitors user activity to offer personalised material in the exercises. The sentences that the users interact are evaluated in terms of intelligibility, informativeness and typicality and stored in the tables for other processes. If the sentence is found not intelligible, it is discarded. For  informativeness and typicality, a score is assigned to the sentence with respect to the word of interest (There is an existing SenEx repo which is used to evaluate and assign these scores to the sentences in COCA corpora). Another evaluation is to find out the Wordnet sense name of the meaning of the word of interest in the sentence. This spesific task is called word-sense disambiguation, WSD for future refenreces. 
+Our chrome extension monitors user activity to offer personalised material in the exercises. The sentences that the users interact are evaluated in terms of intelligibility, informativeness and typicality and stored in the tables for other processes. If the sentence is found not intelligible, it is discarded. For  informativeness and typicality, a score is assigned to the sentence with respect to the word of interest (There is an existing SenEx repo which is used to evaluate and assign these scores to the sentences in COCA corpora, so you don't need to worry about developing any function to get these scores. However, any optimisation on the functions are appreciated. After NDA, the repo will be shared.). Another evaluation is to find out the Wordnet sense name of the meaning of the word of interest in the sentence. This spesific task is called word-sense disambiguation, WSD for future refenreces. 
 
 #### Example input and results for sentence evaluation process
 
@@ -58,5 +58,5 @@ In order to protect users' privacy, the named entities such as person, city or c
 * Create a function to clean the sentences parsed from websites.
 * Revise senEx repo for evaluation function. 
 * Use cosine-lesk or another function for WSD to find out Wordnet sense offset ID of the word. 
-* Create functions update the tables.
+* Create functions updating the tables.
 * Deployment of the function as a AWS lambda. 
