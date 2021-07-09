@@ -16,10 +16,12 @@ input:
  outcome:
  
   * result of senEx function = ('join', 'VERB', 'VBG', 0.71, (1.43, (('party', 'NOUN'), 'VERB+NOUN')))
-      "explanation of result of senEx function: 
+     <pre>
+      explanation of result of senEx function: 
       0.71 -> informativeness score, 
       1.43 -> typicality score,
       party_NOUN -> found collocation of the word in the sentence", 'VERB+NOUN' -> type of collocation
+      </pre>
   * update on the tables
     <pre>
     Sentence (Table)                                            - New Entry
